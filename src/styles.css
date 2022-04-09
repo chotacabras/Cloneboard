@@ -1,0 +1,422 @@
+html {
+  --ff: f-barlow, sans-serif;
+  --fs: 11;
+  --lh: calc(var(--fs) * 1.25);
+  --fs-head: 13.6;
+  --fs-nops: 9;
+  --lw: calc(20 * var(--fs) + 30);
+}
+
+.createBoard {
+  width: 300px;
+  height: 30px;
+  background: #17171a;
+  color: #dddddd;
+}
+
+body {
+  background: #09090a;
+  font-family: var(--ff);
+}
+
+.boardForm {
+  width: -webkit-max-content;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  min-width: calc(var(--lw) * 1px);
+  margin: 0 auto;
+  padding-top: 11px;
+  margin: 0 0 10px;
+}
+
+.lists {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.list {
+  border-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 0 0 2px #fff1 inset;
+  background: #17171a;
+  align-self: flex-start;
+}
+
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-direction: column;
+}
+
+.note {
+  display: flex;
+
+  color: rgb(0, 0, 0);
+  align-self: flex-start;
+}
+
+.head {
+  width: 250px;
+  height: 32px;
+  position: relative;
+}
+
+.board .head {
+  border-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0 0 2px #fff1 inset;
+  background: #17171a;
+}
+
+.noteHead {
+  width: 240px;
+  height: 24.75px;
+  background: linear-gradient(#242426, #202022);
+  position: relative;
+  box-shadow: 0 1px 3px #000a;
+  text-shadow: 0 0 4px #0008;
+  margin-left: 5.5px;
+  margin-bottom: 5px;
+  margin-top: 1px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  padding: 5px 5px 5px 30px;
+  line-height: calc(20 / 11);
+}
+
+.menuLogo {
+  display: flex;
+  font-size: 11px;
+  position: absolute;
+  top: 1.75px;
+  right: 0;
+  height: 10px;
+  width: 10px;
+  color: rgb(152, 144, 130);
+  justify-content: end;
+  padding: 5px 10px 10px 30px;
+}
+
+.noteMenuLogo {
+  display: flex;
+  font-size: 11px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 10px;
+  width: 10px;
+  color: rgb(152, 144, 130);
+  justify-content: end;
+  padding: 2px 10px 10px 30px;
+}
+
+.text {
+  min-height: 20px;
+  font-size: 13px;
+  white-space: pre;
+  overflow: hidden;
+  color: #eee;
+  width: 240px;
+  height: 22px;
+  padding: 9px 5px 6px 10px;
+}
+
+.noteText {
+  min-height: 20px;
+  font-size: 11px;
+  white-space: pre;
+  overflow: hidden;
+  color: #d6d6d6;
+  padding: 6px 5px 6px 10px;
+}
+
+.edit {
+  font-weight: 500;
+  font-size: calc(var(--fs-head) / 11 * 1rem);
+  line-height: calc(20 / var(--fs-head));
+  padding: 0 5px 2px;
+  border: none;
+}
+
+.editStyle {
+  width: 230px;
+  height: 20px;
+}
+
+a {
+  color: #eee;
+  width: 76px;
+  height: 32px;
+  text-decoration: none;
+}
+
+.site {
+  color: #7e7e7e;
+  outline: none;
+  text-decoration: none;
+  top: 5px;
+  width: 76px;
+  height: 32px;
+  padding: 14px 14px;
+  font-size: 11px;
+  position: absolute;
+}
+
+.site:hover {
+  text-decoration: none;
+  color: #eeeeee;
+}
+.site:focus {
+  text-decoration: none;
+  color: #eeeeee;
+}
+.site:active {
+  text-decoration: none;
+  color: #eeeeee;
+}
+.site:visited {
+  text-decoration: none;
+  color: #eeeeee;
+}
+
+.boardsMappedText {
+  color: #777777;
+  font-size: 13px;
+}
+
+.boardsMappedText:hover {
+  color: #eeeeee;
+}
+
+.createAndCurrentBoardsText {
+  min-height: 20px;
+  font-size: 16px;
+  white-space: pre;
+  overflow: hidden;
+  color: #eee;
+  width: 240px;
+}
+
+.inputCreateListForm {
+  background: #17171a;
+  color: #eee;
+  outline: 1px solid #bc9908;
+  border: none;
+  line-height: calc(20 / var(--fs-head));
+  width: 212px;
+  height: 18px;
+  padding: 0 5px 2px;
+}
+
+.inputCreateNoteForm {
+  font-size: 11px;
+  color: #eee;
+  outline: 1px solid #bc9908;
+  border: none;
+  width: 212px;
+  height: 14px;
+  background: linear-gradient(#242426, #202022);
+}
+
+.moveLists {
+  display: flex;
+  justify-content: row;
+}
+
+.menuNoteDeleteButton {
+  display: flex;
+  font-size: 12px;
+  width: 16px;
+  height: 25px;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  color: rgb(152, 144, 130);
+  justify-content: end;
+  padding-right: 10px;
+  padding-top: 2px;
+}
+
+.menuNoteDeleteButton:hover {
+  color: #f34b4b;
+}
+
+.menuListDeleteButton {
+  display: flex;
+  font-size: 11px;
+  position: absolute;
+  width: 12px;
+  height: 29px;
+  top: 1.75px;
+  right: 50px;
+  color: rgb(152, 144, 130);
+  justify-content: right;
+  padding: 5px 50px 0px 30px;
+}
+
+.menuListDeleteButton:hover {
+  color: #f34b4b;
+}
+
+.menuBoardDeleteButton {
+  display: flex;
+  font-size: 11px;
+  position: absolute;
+  width: 12px;
+  height: 29px;
+  top: 1.75px;
+  right: -5px;
+  color: rgb(152, 144, 130);
+  justify-content: right;
+  padding: 5px 50px 0px 30px;
+}
+
+.menuBoardDeleteButton:hover {
+  color: #f34b4b;
+}
+
+.menuListAddButton {
+  display: flex;
+  width: 5px;
+  height: 19px;
+  font-size: 11px;
+  position: absolute;
+  top: 1.75px;
+  right: 0;
+  color: rgb(152, 144, 130);
+  justify-content: end;
+  padding: 5px 10px 10px 23.5px;
+}
+
+.menuListAddButton:hover {
+  color: #eec409;
+}
+
+.menuNoteAddButton {
+  display: flex;
+  width: 5px;
+  height: 19px;
+  font-size: 11px;
+  position: absolute;
+  top: 1.75px;
+  right: 0;
+  color: rgb(152, 144, 130);
+  justify-content: end;
+  padding: 5px 10px 10px 29px;
+}
+
+.menuNoteAddButton:hover {
+  color: #eec409;
+}
+
+.menuListMoveLeftButton {
+  display: flex;
+  width: 1px;
+  height: 29px;
+  font-size: 11px;
+  position: relative;
+  top: -3px;
+  right: 73.55px;
+  color: rgb(152, 144, 130);
+  justify-content: right;
+  padding: 5px 50px 10px 25px;
+}
+
+.menuListMoveLeftButton:hover {
+  color: #eec409;
+}
+
+.menuListMoveRightButton {
+  display: flex;
+  width: 1px;
+  height: 29px;
+  font-size: 11px;
+  position: relative;
+  top: -46.8px;
+  right: 45.5px;
+  color: rgb(152, 144, 130);
+  justify-content: right;
+  padding: 5px 50px 10px 15px;
+}
+
+.menuListMoveRightButton:hover {
+  color: #eec409;
+}
+
+.draggableOutline {
+  outline: 1px solid #bc9908;
+}
+
+.cancelListRenameButton {
+  display: flex;
+  font-size: 11px;
+  position: relative;
+  width: 2px;
+  height: 15px;
+  top: 1px;
+  right: -40px;
+  color: rgb(152, 144, 130);
+  justify-content: right;
+}
+
+.cancelListRenameButton:hover {
+  color: #f34b4b;
+}
+
+.cancelBoardRenameButton {
+  display: flex;
+  font-size: 11px;
+  position: relative;
+  width: 2px;
+  height: 15px;
+  top: -7px;
+  right: -545px;
+  color: rgb(152, 144, 130);
+  justify-content: right;
+}
+
+.cancelBoardRenameButton:hover {
+  color: #f34b4b;
+}
+
+.cancelNoteRenameButton {
+  display: flex;
+  font-size: 11px;
+  position: relative;
+  width: 2px;
+  height: 15px;
+  top: -2px;
+  right: -40px;
+  color: rgb(152, 144, 130);
+  justify-content: right;
+}
+
+.cancelNoteRenameButton:hover {
+  color: #f34b4b;
+}
