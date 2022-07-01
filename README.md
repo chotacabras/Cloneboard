@@ -1,6 +1,6 @@
 # Cloneboard
 
-Cloneboard is a kanban board / task list manager, designed to be compact, readable and quick in use.
+Cloneboard is a kanban board/task list manager, designed to be compact, readable and quick in use.
 You can use it here: https://cloneboard.herokuapp.com/
 
 ![cloneboard](https://user-images.githubusercontent.com/102478601/162572439-1bba1420-fe33-4920-9228-2d55e88c64a6.PNG)
